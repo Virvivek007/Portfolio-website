@@ -17,16 +17,110 @@ const defaultPortfolio = {
     facebook: 'https://www.facebook.com/vir.vivek.3',
     instagram: 'https://www.instagram.com/vivek_vir_007?igsh=Ymo1a3ZkNnBiOHE3/'
   },
-  stats: [],
+  stats: [
+    { label: 'Projects Completed', value: '10+' },
+    { label: 'Achievements', value: '20' },
+    { label: 'Mentored Students', value: '100' },
+    { label: 'LinkedIn Followers', value: '1175' }
+  ],
   about: {
-    story: '',
-    details: [],
-    strengths: []
+    story: 'With over a year of comprehensive experience in the field of data science and analytics, accompanied by a bachelor\'s degree in engineering. Proficient in data analysis, statistical analysis, hypothesis testing, customer behaviour analysis, and machine learning. Demonstrated success in leading impactful projects and providing effective mentorship.',
+    details: [
+      { label: 'Profile', value: 'Data Science & Analytics' },
+      { label: 'Domain', value: 'Data Scientist & Machine Learning Engineer' },
+      { label: 'Education', value: 'Bachelor of Technology' },
+      { label: 'Language', value: 'English, Hindi' },
+      { label: 'BI Tools', value: 'Microsoft Power BI & Tableau' },
+      { label: 'Skills', value: 'Python, Python Libraries, Excel, Git, SQL, C, HTML5, CSS & JS' },
+      { label: 'Interest', value: 'Travelling, Singing, Teaching, Playing Volleyball and Chess' }
+    ],
+    strengths: ['SQL', 'Python', 'Data Visualization', 'Statistical Analysis', 'Machine Learning', 'Power BI']
   },
-  experience: [],
-  education: [],
-  projects: [],
-  strengths: []
+  experience: [
+    {
+      period: '2025 - Present',
+      title: 'Website Development Intern',
+      company: 'Edunet Foundation',
+      details: 'Built a MERN stack website addressing real-world problems. The internship sharpened my skills in user-friendly design, performance optimization, and scalable solutions.'
+    }
+  ],
+  education: [
+    {
+      period: '2023 - 2027',
+      title: 'Bachelor of Technology',
+      subtitle: 'Computer Science and Engineering',
+      institution: 'Katihar Engineering College, Katihar',
+      grade: 'Grade: First class distinction.'
+    },
+    {
+      period: '2023 - 2026',
+      title: 'Bachelor of Science [Hons]',
+      subtitle: 'Computer Science and Data Analytics',
+      institution: 'Indian Institute Of Technology, Patna',
+      grade: 'Grade: First class distinction.'
+    },
+    {
+      period: '2021 - 2023',
+      title: 'Higher Secondary School [12TH]',
+      subtitle: 'CBSE Board',
+      institution: 'D A V Public School Dhori C C L Bokaro Jharkhand',
+      grade: 'Grade: First class distinction.'
+    },
+    {
+      period: '2020 - 2021',
+      title: 'Secondary School [10TH]',
+      subtitle: 'CBSE Board',
+      institution: 'Rukmini Devi Public School Bokaro Jharkhand',
+      grade: 'Grade: First class distinction.'
+    }
+  ],
+  projects: [
+    {
+      title: 'UniPulse AI',
+      description: 'A full-stack AI platform that scrapes Reddit communities, analyzes student sentiment with NLP and ML, and presents insights through a polished dashboard for smarter community understanding.',
+      link: 'https://github.com/Virvivek007/unipulse_sentiment_analysis',
+      image: 'https://images.unsplash.com/photo-1526379095098-d400fd0bf935?auto=format&fit=crop&w=1200&q=80',
+      tag: 'AI / NLP'
+    },
+    {
+      title: 'E-commerce Product Recommendation System',
+      description: 'A recommendation engine designed to improve product discovery and customer engagement using behavioral patterns and personalized suggestions.',
+      link: 'https://github.com/Virvivek007/E-commerce-Product-Recommendation-system',
+      image: 'https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=1200&q=80',
+      tag: 'Recommendation'
+    },
+    {
+      title: 'Packed-Food-Fact',
+      description: 'A food literacy web app designed to help users understand nutrition, ingredients, and healthier choices through accessible and engaging content.',
+      link: 'https://virvivek007.github.io/Packed-Food-Fact/',
+      image: 'https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=1200&q=80',
+      tag: 'Food Tech'
+    },
+    {
+      title: 'IT Company Landing Page',
+      description: 'A modern business landing page focused on brand positioning, service highlights, and conversion-ready UI design for an IT company.',
+      link: 'https://github.com/Virvivek007/IT-Company-Landing-Page',
+      image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80',
+      tag: 'Web Design'
+    },
+    {
+      title: 'Netflix Data Analysis using Python',
+      description: 'An exploratory data analysis project that studies Netflix trend patterns, genre popularity, and yearly viewing behavior using Python-based insights.',
+      link: 'https://github.com/Virvivek007/Netflix_Data_Analysis/blob/main/Netflix_Data_Analytics.ipynb',
+      image: 'https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=1200&q=80',
+      tag: 'Data Analysis'
+    }
+  ],
+  strengths: [
+    'Data Science',
+    'Machine Learning',
+    'Python Libraries',
+    'SQL',
+    'Excel',
+    'Data Visualization',
+    'Power BI',
+    'Tableau'
+  ]
 };
 
 function App() {
@@ -42,8 +136,22 @@ function App() {
   }, []);
 
   useEffect(() => {
+    const shouldUseApi =
+      window.location.hostname === 'localhost' ||
+      window.location.hostname === '127.0.0.1';
+
+    if (!shouldUseApi) {
+      setPortfolio(defaultPortfolio);
+      return;
+    }
+
     fetch('/api/portfolio')
-      .then((response) => response.json())
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error('API not available');
+        }
+        return response.json();
+      })
       .then((data) => setPortfolio(data))
       .catch(() => setPortfolio(defaultPortfolio));
   }, []);
@@ -65,6 +173,14 @@ function App() {
     setStatus('Sending...');
 
     try {
+      const isLocalDev =
+        window.location.hostname === 'localhost' ||
+        window.location.hostname === '127.0.0.1';
+
+      if (!isLocalDev) {
+        throw new Error('The contact form requires the backend API to be active in production.');
+      }
+
       const response = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
