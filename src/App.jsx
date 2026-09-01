@@ -3,13 +3,13 @@ import { useEffect, useState } from "react";
 const defaultPortfolio = {
   profile: {
     name: "Vivek Kumar Tiwari",
-    role: "Data Analyst | FullStack Developer",
+    role: "CS & Data Analytics Graduate | Data Scientist",
     tagline:
-      "Data-driven professional focused on machine learning, business intelligence, and practical analytics solutions.",
+      "Transforming data into meaningful, actionable insights through data analytics, machine learning, and full-stack development.",
     email: "vkt.vivek007@gmail.com",
     phone: "+91 1020304050",
     location: "Bihar, India",
-    availability: "Open to internships and opportunities",
+    availability: "Open to opportunities",
     resumeLink: "resume_vkt_1.pdf",
     github: "https://github.com/Virvivek007",
     linkedin: "https://www.linkedin.com/in/vkt16/",
@@ -26,29 +26,31 @@ const defaultPortfolio = {
   ],
   about: {
     story:
-      "With over a year of comprehensive experience in the field of data science and analytics, accompanied by a bachelor's degree in engineering. Proficient in data analysis, statistical analysis, hypothesis testing, customer behaviour analysis, and machine learning. Demonstrated success in leading impactful projects and providing effective mentorship.",
+      "I'm Vivek Kumar Tiwari, a Computer Science and Data Analytics graduate from IIT Patna with a passion for transforming data into meaningful, actionable insights. My experience spans data analytics, data science, machine learning, and full-stack web development, backed by a strong command of tools like Power BI and the MERN stack. I thrive on solving real-world problems through clean, scalable solutions, and I'm continually driven to deepen my expertise at the intersection of data and technology.",
     details: [
-      { label: "Profile", value: "Data Science & Analytics" },
-      { label: "Domain", value: "Data Scientist & Machine Learning Engineer" },
-      { label: "Education", value: "Bachelor of Technology" },
-      { label: "Language", value: "English, Hindi" },
-      { label: "BI Tools", value: "Microsoft Power BI & Tableau" },
+      { label: "Profile", value: "Data Scientist & Full-Stack Developer" },
+      { label: "Specialization", value: "Data Analytics & Machine Learning" },
+      { label: "Education", value: "B.S. CS & Data Analytics - IIT Patna" },
+      { label: "Languages", value: "Python, C++, C, JavaScript, SQL, HTML/CSS" },
+      { label: "BI & Analytics Tools", value: "Power BI, Tableau, Jupyter, Pandas, Matplotlib" },
       {
-        label: "Skills",
-        value: "Python, Python Libraries, Excel, Git, SQL, C, HTML5, CSS & JS",
+        label: "Core Expertise",
+        value: "Data Analysis, ML Engineering, REST APIs, MERN Stack Development",
       },
       {
-        label: "Interest",
-        value: "Travelling, Singing, Teaching, Playing Volleyball and Chess",
+        label: "Interests",
+        value: "AI/ML Research, Data Visualization, Scalable System Design",
       },
     ],
     strengths: [
-      "SQL",
-      "Python",
-      "Data Visualization",
-      "Statistical Analysis",
+      "Data Analysis",
       "Machine Learning",
-      "Power BI",
+      "Python Programming",
+      "SQL & Data Manipulation",
+      "Full-Stack Development",
+      "Power BI & Visualization",
+      "REST API Development",
+      "Problem Solving",
     ],
   },
   experience: [
@@ -320,20 +322,28 @@ function App() {
             <span className="eyebrow">About</span>
             <h3>About Me</h3>
           </div>
-          <div className="container about-grid">
+          
+          {/* Profile Photo + Story Section */}
+          <div className="container about-top-section">
+            <div className="about-image-wrapper">
+              <img src="profile_pic.jpg" alt="Profile" className="about-profile-image" />
+            </div>
             <div className="about-story">
               <p>{about.story}</p>
             </div>
-            <div className="about-details">
-              <ul>
-                {about.details.map((item) => (
-                  <li key={item.label}>
-                    <span>{item.label}:</span> <strong>{item.value}</strong>
-                  </li>
-                ))}
-              </ul>
-            </div>
           </div>
+
+          {/* Details Grid Section */}
+          <div className="container about-details">
+            <ul>
+              {about.details.map((item) => (
+                <li key={item.label}>
+                  <span>{item.label}:</span> <strong>{item.value}</strong>
+                </li>
+              ))}
+            </ul>
+          </div>
+
           <div className="container chips-wrap">
             {strengths.map((skill) => (
               <span key={skill} className="chip">
