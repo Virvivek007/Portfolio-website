@@ -1,0 +1,26 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="800" fill="url(#bg)"/>
+  <circle cx="200" cy="160" r="120" fill="#FCA5A5" fill-opacity="0.25"/>
+  <circle cx="1010" cy="180" r="130" fill="#86EFAC" fill-opacity="0.18"/>
+  <rect x="130" y="120" width="940" height="560" rx="30" fill="#FFF7ED" fill-opacity="0.95"/>
+  <rect x="180" y="170" width="300" height="420" rx="20" fill="#F59E0B" fill-opacity="0.15"/>
+  <rect x="520" y="170" width="500" height="420" rx="20" fill="#FFFFFF" stroke="#E5E7EB"/>
+  <path d="M260 490C260 420 330 360 400 360C470 360 540 420 540 490V520H260V490Z" fill="#22C55E" fill-opacity="0.7"/>
+  <path d="M290 450C290 410 320 380 360 380C400 380 430 410 430 450V520H290V450Z" fill="#FDE68A" fill-opacity="0.8"/>
+  <circle cx="385" cy="330" r="90" fill="#FECACA"/>
+  <circle cx="385" cy="330" r="60" fill="#F59E0B" fill-opacity="0.8"/>
+  <rect x="560" y="215" width="210" height="22" rx="11" fill="#F59E0B" fill-opacity="0.7"/>
+  <rect x="560" y="270" width="300" height="18" rx="9" fill="#CBD5E1"/>
+  <rect x="560" y="310" width="350" height="18" rx="9" fill="#CBD5E1"/>
+  <rect x="560" y="350" width="260" height="18" rx="9" fill="#CBD5E1"/>
+  <rect x="560" y="430" width="200" height="110" rx="18" fill="#86EFAC" fill-opacity="0.25"/>
+  <rect x="790" y="430" width="180" height="110" rx="18" fill="#FCD34D" fill-opacity="0.25"/>
+  <text x="180" y="640" fill="#0F172A" font-family="Arial, sans-serif" font-size="26" font-weight="700">Healthy Food Facts</text>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="800" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FDE68A"/>
+      <stop offset="0.5" stop-color="#FED7AA"/>
+      <stop offset="1" stop-color="#DCFCE7"/>
+    </linearGradient>
+  </defs>
+</svg>

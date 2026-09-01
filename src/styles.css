@@ -676,8 +676,8 @@ textarea {
 .project-carousel-wrap {
   overflow-x: auto;
   padding-bottom: 12px;
-  scrollbar-width: thin;
-  scrollbar-color: var(--primary) rgba(255,255,255,0.08);
+  --scrollbar-width: thin;
+  --scrollbar-color: var(--primary) rgba(255,255,255,0.08);
 }
 
 .project-carousel-wrap::-webkit-scrollbar {
@@ -926,18 +926,23 @@ textarea {
 }
 
 .social-bar a {
-  padding: 10px 14px;
-  border-radius: 12px;
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
   background: rgba(255, 255, 255, 0.04);
   border: 1.5px solid var(--primary-glow);
   box-shadow: 0 4px 12px var(--shadow);
   color: var(--text);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  font-weight: 600;
-  letter-spacing: 0.02em;
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  justify-content: center;
+}
+
+.social-bar a svg {
+  width: 20px;
+  height: 20px;
+  display: block;
 }
 
 .social-bar a:hover {
@@ -946,6 +951,19 @@ textarea {
   color: var(--primary);
   transform: translateY(-2px);
   box-shadow: 0 8px 24px var(--shadow-lg);
+}
+
+.footer-bottom {
+  padding-top: 18px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+.footer-bottom p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+  letter-spacing: 0.04em;
 }
 
 [data-theme="light"] .social-bar a {
