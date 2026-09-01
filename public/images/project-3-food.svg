@@ -1,26 +1,115 @@
 <svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="1200" height="800" fill="url(#bg)"/>
-  <circle cx="200" cy="160" r="120" fill="#FCA5A5" fill-opacity="0.25"/>
-  <circle cx="1010" cy="180" r="130" fill="#86EFAC" fill-opacity="0.18"/>
-  <rect x="130" y="120" width="940" height="560" rx="30" fill="#FFF7ED" fill-opacity="0.95"/>
-  <rect x="180" y="170" width="300" height="420" rx="20" fill="#F59E0B" fill-opacity="0.15"/>
-  <rect x="520" y="170" width="500" height="420" rx="20" fill="#FFFFFF" stroke="#E5E7EB"/>
-  <path d="M260 490C260 420 330 360 400 360C470 360 540 420 540 490V520H260V490Z" fill="#22C55E" fill-opacity="0.7"/>
-  <path d="M290 450C290 410 320 380 360 380C400 380 430 410 430 450V520H290V450Z" fill="#FDE68A" fill-opacity="0.8"/>
-  <circle cx="385" cy="330" r="90" fill="#FECACA"/>
-  <circle cx="385" cy="330" r="60" fill="#F59E0B" fill-opacity="0.8"/>
-  <rect x="560" y="215" width="210" height="22" rx="11" fill="#F59E0B" fill-opacity="0.7"/>
-  <rect x="560" y="270" width="300" height="18" rx="9" fill="#CBD5E1"/>
-  <rect x="560" y="310" width="350" height="18" rx="9" fill="#CBD5E1"/>
-  <rect x="560" y="350" width="260" height="18" rx="9" fill="#CBD5E1"/>
-  <rect x="560" y="430" width="200" height="110" rx="18" fill="#86EFAC" fill-opacity="0.25"/>
-  <rect x="790" y="430" width="180" height="110" rx="18" fill="#FCD34D" fill-opacity="0.25"/>
-  <text x="180" y="640" fill="#0F172A" font-family="Arial, sans-serif" font-size="26" font-weight="700">Healthy Food Facts</text>
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="800" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#FDE68A"/>
-      <stop offset="0.5" stop-color="#FED7AA"/>
-      <stop offset="1" stop-color="#DCFCE7"/>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fff5e6;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#ffe0b2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ffcc80;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="chipGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff4444;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#cc0000;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="candyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff69b4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#d81b60;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="popGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff9800;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e65100;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="chocoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8d6e63;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4e342e;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="cookieGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffd700;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#daa520;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="biscuitGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffed4e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fdd835;stop-opacity:1" />
     </linearGradient>
   </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="800" fill="url(#bgGrad)"/>
+  
+  <!-- Decorative circles -->
+  <circle cx="150" cy="100" r="80" fill="#ff6b6b" opacity="0.1"/>
+  <circle cx="1050" cy="750" r="120" fill="#ff9800" opacity="0.12"/>
+  <circle cx="600" cy="50" r="100" fill="#ffd700" opacity="0.08"/>
+  
+  <!-- Shelf -->
+  <rect x="50" y="420" width="1100" height="30" fill="#6d4c41" opacity="0.9" rx="5"/>
+  <rect x="50" y="420" width="1100" height="4" fill="#8d6e63" opacity="0.5"/>
+  
+  <!-- Chips Bag 1 (Red/Bright) -->
+  <path d="M 120 180 L 200 160 L 280 190 L 260 420 Q 200 445 140 420 Z" fill="url(#chipGrad)"/>
+  <path d="M 200 160 L 270 190 L 250 420 Q 200 440 150 420 Z" fill="#ff6666" opacity="0.6"/>
+  <ellipse cx="200" cy="200" rx="50" ry="15" fill="#ffaaaa" opacity="0.4"/>
+  <text x="200" y="300" font-size="20" font-weight="bold" text-anchor="middle" fill="white" font-family="Arial">CHIPS</text>
+  <text x="200" y="330" font-size="12" text-anchor="middle" fill="white" opacity="0.8">Crispy!</text>
+  
+  <!-- Biscuit Box (Golden Yellow) -->
+  <rect x="330" y="220" width="130" height="180" fill="url(#biscuitGrad)" rx="10" stroke="#ff9800" stroke-width="2"/>
+  <rect x="340" y="230" width="110" height="160" fill="#fff9c4" opacity="0.6"/>
+  <rect x="340" y="235" width="110" height="40" fill="#ffeb3b" opacity="0.3"/>
+  <text x="395" y="320" font-size="16" font-weight="bold" text-anchor="middle" fill="#d84315">BISCUITS</text>
+  <text x="395" y="345" font-size="11" text-anchor="middle" fill="#d84315" font-weight="bold">Premium</text>
+  
+  <!-- Candy Bag (Hot Pink) -->
+  <path d="M 500 140 L 600 110 L 700 150 L 680 420 Q 600 450 500 420 Z" fill="url(#candyGrad)"/>
+  <path d="M 600 110 L 690 150 L 670 420 Q 600 440 510 420 Z" fill="#ff1493" opacity="0.5"/>
+  <circle cx="580" cy="200" r="12" fill="#ffb6d9" opacity="0.7"/>
+  <circle cx="630" cy="220" r="10" fill="#ff89ad" opacity="0.8"/>
+  <circle cx="610" cy="250" r="11" fill="#ffb6d9" opacity="0.6"/>
+  <text x="600" y="310" font-size="19" font-weight="bold" text-anchor="middle" fill="white">CANDY</text>
+  <text x="600" y="340" font-size="12" text-anchor="middle" fill="white" opacity="0.9">Sweet!</text>
+  
+  <!-- Popcorn Box (Vibrant Orange) -->
+  <rect x="780" y="180" width="125" height="200" fill="url(#popGrad)" rx="10" stroke="#ff6f00" stroke-width="2"/>
+  <rect x="790" y="190" width="105" height="180" fill="#ffe0b2" opacity="0.5"/>
+  <circle cx="810" cy="210" r="8" fill="#fff59d" opacity="0.8"/>
+  <circle cx="860" cy="205" r="7" fill="#fff59d" opacity="0.7"/>
+  <circle cx="830" cy="235" r="9" fill="#fff59d" opacity="0.75"/>
+  <text x="842" y="310" font-size="15" font-weight="bold" text-anchor="middle" fill="white">POPCORN</text>
+  <text x="842" y="335" font-size="11" text-anchor="middle" fill="white" opacity="0.9">Fluffy!</text>
+  
+  <!-- Chocolate Box (Rich Brown) -->
+  <rect x="960" y="250" width="120" height="160" fill="url(#chocoGrad)" rx="10" stroke="#5d4037" stroke-width="2"/>
+  <rect x="970" y="260" width="100" height="140" fill="#a1887f" opacity="0.4"/>
+  <rect x="970" y="265" width="100" height="35" fill="#d7ccc8" opacity="0.3"/>
+  <text x="1020" y="330" font-size="14" font-weight="bold" text-anchor="middle" fill="#ffeb3b">CHOCOLATE</text>
+  <text x="1020" y="355" font-size="11" text-anchor="middle" fill="#fff9c4" opacity="0.9">Rich!</text>
+  
+  <!-- Cookie Bag (Golden) -->
+  <path d="M 1100 210 L 1160 190 L 1220 220 L 1200 400 Q 1160 420 1100 400 Z" fill="url(#cookieGrad)"/>
+  <path d="M 1160 190 L 1210 220 L 1190 400 Q 1160 415 1110 400 Z" fill="#ffed4e" opacity="0.5"/>
+  <circle cx="1130" cy="260" r="9" fill="#daa520" opacity="0.6"/>
+  <circle cx="1170" cy="280" r="8" fill="#b8860b" opacity="0.7"/>
+  <text x="1160" y="310" font-size="16" font-weight="bold" text-anchor="middle" fill="white">COOKIES</text>
+  <text x="1160" y="335" font-size="11" text-anchor="middle" fill="white" opacity="0.8">Tasty!</text>
+  
+  <!-- Nutrition Label Box -->
+  <rect x="400" y="480" width="400" height="240" fill="white" stroke="#2196F3" stroke-width="3" rx="15" opacity="0.95"/>
+  <rect x="410" y="490" width="380" height="50" fill="linear-gradient(90deg, #2196F3, #1976D2)" rx="10"/>
+  <text x="600" y="525" font-size="22" font-weight="bold" text-anchor="middle" fill="white">NUTRITION FACTS</text>
+  
+  <line x1="420" y1="555" x2="780" y2="555" stroke="#e0e0e0" stroke-width="2"/>
+  
+  <text x="430" y="585" font-size="13" fill="#333" font-weight="600">Serving Size: 1 pack</text>
+  <text x="430" y="610" font-size="12" fill="#666">Calories: 150-220 | Protein: 2-5g</text>
+  <text x="430" y="635" font-size="12" fill="#666">Fat: 8-15g | Carbs: 16-28g</text>
+  <text x="430" y="660" font-size="12" fill="#666">Sugar: 2-8g | Sodium: 200-400mg</text>
+  <text x="430" y="685" font-size="11" fill="#ff6f00" font-weight="bold">Always check labels for healthier choices!</text>
+  
+  <!-- Title with Shadow -->
+  <text x="602" y="752" font-size="40" font-weight="bold" text-anchor="middle" fill="#333">Packed Food Fact</text>
+  <text x="600" y="750" font-size="40" font-weight="bold" text-anchor="middle" fill="#ff9800" opacity="0.3">Packed Food Fact</text>
 </svg>
