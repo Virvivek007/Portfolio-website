@@ -10,7 +10,7 @@ const defaultPortfolio = {
     phone: "+91 1020304050",
     location: "Bihar, India",
     availability: "Open to opportunities",
-    resumeLink: "/images/resumevkt.pdf",
+    resumeLink: "/images/vivek_resume_26.pdf",
     github: "https://github.com/Virvivek007",
     linkedin: "https://www.linkedin.com/in/vkt16/",
     youtube: "https://youtube.com/@vivekcodex?si=ryTWKOes0PoRVoLm",
@@ -111,7 +111,7 @@ const defaultPortfolio = {
       title: "UniPulse AI",
       description:
         "A campus intelligence dashboard that analyzes student sentiment, placement trends, festival participation, extracurricular engagement, hostel life, and overall university experience through AI-driven analytics.",
-      link: "https://github.com/Virvivek007/unipulse_sentiment_analysis",
+      link: "https://unipulse-sentiment-analysis.vercel.app/",
       image:
         "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80",
       tag: "Campus Life & Placement Analytics",
@@ -120,7 +120,7 @@ const defaultPortfolio = {
       title: "E-commerce Product Recommendation System",
       description:
         "A recommendation engine designed to improve product discovery and customer engagement using behavioral patterns and personalized suggestions. It mirrors the shopping experience of Amazon and Flipkart with curated product discovery.",
-      link: "https://github.com/Virvivek007/E-commerce-Product-Recommendation-system",
+      link: "https://e-commerce-appuct-recommendation-system-oy9uqf8uuc8bnyeu7o3mq9.streamlit.app/s://github.com/Virvivek007/E-commerce-Product-Recommendation-system",
       image:
         "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1200&q=80",
       tag: "Order Items List with Product Cards",
@@ -137,7 +137,7 @@ const defaultPortfolio = {
       title: "IT Company Landing Page",
       description:
         "A modern business landing page focused on brand positioning, service highlights, and conversion-ready UI design for an IT company.",
-      link: "https://github.com/Virvivek007/IT-Company-Landing-Page",
+      link: "https://it-company-landing-page-gamma.vercel.app/",
       image:
         "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80",
       tag: "Placement Drive",
