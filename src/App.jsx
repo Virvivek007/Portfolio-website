@@ -3,14 +3,14 @@ import { useEffect, useState } from "react";
 const defaultPortfolio = {
   profile: {
     name: "Vivek Kumar Tiwari",
-    role: "CS & Data Analytics Graduate | Data Scientist",
+    role: "Data Analyst | FullStack Developer",
     tagline:
       "Transforming data into meaningful, actionable insights through data analytics, machine learning, and full-stack development.",
     email: "vkt.vivek007@gmail.com",
     phone: "+91 1020304050",
     location: "Bihar, India",
     availability: "Open to opportunities",
-    resumeLink: "resume_vkt_1.pdf",
+    resumeLink: "resumevkt.pdf",
     github: "https://github.com/Virvivek007",
     linkedin: "https://www.linkedin.com/in/vkt16/",
     youtube: "https://youtube.com/@vivekcodex?si=ryTWKOes0PoRVoLm",
@@ -326,7 +326,7 @@ function App() {
           {/* Profile Photo + Story Section */}
           <div className="container about-top-section">
             <div className="about-image-wrapper">
-              <img src="profile_pic.jpg" alt="Profile" className="about-profile-image" />
+              <img src="profilepic.jpg" alt="Profile" className="about-profile-image" />
             </div>
             <div className="about-story">
               <p>{about.story}</p>
